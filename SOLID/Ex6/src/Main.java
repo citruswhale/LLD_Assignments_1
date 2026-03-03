@@ -9,7 +9,7 @@ public class Main {
         NotificationSender sms = new SmsSender(audit);
         NotificationSender wa = new WhatsAppSender(audit);
 
-        email.send(n);
+        email.send(SizeBasedMessageNormalizer.normalize(n, SenderConfig.emailMaxLen));
         sms.send(n);
         try {
             wa.send(n);
