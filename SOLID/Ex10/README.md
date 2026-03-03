@@ -11,7 +11,7 @@ A campus transport service books rides for students. It calculates distance, all
 1. High-level booking logic depends on concrete services (hard-coded `new`).
 2. Hard to test booking without real dependencies.
 3. Hard to add a new payment method without editing booking logic.
-4. Business rules (pricingManager) mixed with infrastructure calls.
+4. Business rules (pricing) mixed with infrastructure calls.
 5. No clear abstraction boundaries.
 
 ## 4. Your task
@@ -45,7 +45,7 @@ RECEIPT: R-501 | fare=90.00
 
 ## 9. Hints (OOP-only)
 - Make the booking service accept interfaces in constructor.
-- Keep pricingManager rules separate from infrastructure calls.
+- Keep pricing rules separate from infrastructure calls.
 
 ## 10. Stretch goals
 - Add a “mock” allocator and gateway for tests without touching booking logic.
