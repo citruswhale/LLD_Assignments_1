@@ -5,3 +5,4 @@
 - Then in main pass the implementations of the interfaces which we need. The concrete class choices should be made by the orchestrator main, not the evaluation class.
 - The evaluation class's only job is to receive a set of these "tools" using which it can orchestrate the evaluation. These tools, even if their concrete implementations change later, shouldn't affect the evaluation class.
 - Separation of concerns. Decoupling of unrelated logical entities.
+- To ensure SRP, keep output printing separate from the orchestrator by using a output printing util class.
